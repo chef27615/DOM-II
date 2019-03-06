@@ -65,13 +65,14 @@ window.addEventListener('scroll', function(e){
 const mainContainer = document.querySelector('.container.home');
 
 mainContainer.addEventListener('wheel', function(e){
+    
     if(e.deltaY>0){
         mainContainer.style.backgroundColor ='orange';
     }else{
         mainContainer.style.backgroundColor ='';
     }
     e.stopPropagation();
-})
+}, {passive: true})
 
 //mouse enter
 
