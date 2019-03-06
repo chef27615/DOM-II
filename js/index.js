@@ -26,6 +26,13 @@ window.addEventListener('keydown', function(e){
 })
 
 //dblclick
+const destination = document.querySelectorAll('.destination');
+destination.forEach(function(cv){
+    cv.addEventListener('dblclick', function(e){
+        console.log('clicked on the destination');
+    })
+})
+
 
 const signUpBtn = document.querySelectorAll('.destination .btn');
 signUpBtn.forEach(function(cv){
@@ -84,4 +91,12 @@ footer.addEventListener('mousedown',function(e){
 
 footer.addEventListener('mouseup', function(e){
     footer.style.backgroundColor='white';
+})
+
+
+//animate
+
+const logoHeading = document.getElementsByClassName('main-navigation');
+logoHeading.addEventListener('click', function(e){
+    TweenMax.to('.logo-heading', 2, {right: 600});
 })
