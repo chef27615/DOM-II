@@ -97,7 +97,10 @@ footer.addEventListener('mouseup', function(e){
 
 //animate
 
-const logoHeading = document.getElementsByClassName('main-navigation');
+const logoHeading = document.querySelector('.logo-heading');
+
+
 logoHeading.addEventListener('click', function(e){
-    TweenMax.to('.logo-heading', 2, {right: 600});
-})
+    TweenMax.to('.logo-heading', 2, {x:300});
+});
+
